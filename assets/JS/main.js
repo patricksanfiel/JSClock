@@ -19,7 +19,7 @@ window.onload = () => {
         const CURRENT_HOURS = TODAY.getHours()
         var hoursDegrees = (( CURRENT_HOURS / 12 ) * 360) + 90
 
-        
+
         SECOND_HAND.style.transform = `rotate(${secondsDegrees}deg)`
         MINUTE_HAND.style.transform = `rotate(${minutesDegrees}deg)`
         HOUR_HAND.style.transform = `rotate(${hoursDegrees}deg)`
