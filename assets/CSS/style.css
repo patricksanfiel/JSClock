@@ -1,8 +1,12 @@
+body{
+    height: 100vh;
+    width: 100%;
+}
 #clock{
     height: 20em;
     width: 20em;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 5px solid black;
     position: relative;
     top: 10vh;
     left: 50vw;
@@ -11,10 +15,26 @@
 
 .hand{
     background-color: black;
-    height: 5px;
+    height: 3px;
     width: 50%;
     position: absolute;
     top: 50%;
     transform-origin: 100%;
-    transform: rotate(90deg)
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0, 2.51, 0.55, 0.53)
+}
+#hour-hand{
+    width: 35%;
+    left: 15%;
+}
+
+
+
+
+#interface{
+    background-color: orange;
+    position: absolute;
+    bottom: 0vh;
+    padding-bottom: 50px;
 }

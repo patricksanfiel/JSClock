@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>JS Clock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/CSS/style.css" />
     <script src="assets/JS/main.js"></script>
 </head>
@@ -14,6 +16,51 @@
             <div class="hand" id="hour-hand"></div>
             <div class="hand" id="minute-hand"></div>
             <div class="hand" id="second-hand"></div>
+        </div>
+    </div>
+    <div id="interface" class="container-fluid">
+        <div class="row">
+            <div id="change-clock-face" class="col-4">
+                <span>Change The Color of the Clock Face</span>
+                <div id="face-colors">
+                    <div id="primary-face-colors" class="row primary-colors">
+                        <button class="col-4">Red</button>
+                        <button class="col-4">Yellow</button>
+                        <button class="col-4">Blue</button>
+                    </div>
+                    <div id="secondary-face-colors" class="row secondary-colors">
+                        <button class="col-4">Orange</button>
+                        <button class="col-4">Purple</button>
+                        <button class="col-4">Green</button>
+                    </div>
+                </div>
+            </div>
+            <div id="change-clock-hands" class="col-4">
+                <span>Change The Color of the Clock Hands</span>
+                <div id="primary-hands-colors" class="row primary-colors">
+                    <button class="col-4">Red</button>
+                    <button class="col-4">Yellow</button>
+                    <button class="col-4">Blue</button>
+                </div>
+                <div id="secondary-hands-colors" class="row secondary-colors">
+                    <button class="col-4">Orange</button>
+                    <button class="col-4">Purple</button>
+                    <button class="col-4">Green</button>
+                </div>
+            </div>
+            <div id="change-interface" class="col-4">
+                <span>Change The Color of this Interface</span>
+                <div id="primary-hands-colors" class="row primary-colors">
+                    <button class="col-4">Red</button>
+                    <button class="col-4">Yellow</button>
+                    <button class="col-4">Blue</button>
+                </div>
+                <div id="secondary-hands-colors" class="row secondary-colors">
+                    <button class="col-4">Orange</button>
+                    <button class="col-4">Purple</button>
+                    <button class="col-4">Green</button>
+                </div>
+            </div>
         </div>
     </div>   
 </body>
