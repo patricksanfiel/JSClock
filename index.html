@@ -19,46 +19,50 @@
         </div>
     </div>
     <div id="interface" class="container-fluid">
-        <div class="row">
-            <div id="change-clock-face" class="col-4">
-                <span>Change The Color of the Clock Face</span>
-                <div id="face-colors">
+        <div class="row" id="interface-subdiv-container">
+            <div class="col-4 interface-subdiv">
+                <button id="change-clock-face" class="show-button-toggle" data-panel="clock-face">Change The Color of the Clock Face</button>
+                <div id="face-colors" class="hidden" data-panel="clock-face">
                     <div id="primary-face-colors" class="row primary-colors">
-                        <button class="col-4">Red</button>
-                        <button class="col-4">Yellow</button>
-                        <button class="col-4">Blue</button>
+                        <button class="col-4 color-button" data-color="red">Red</button>
+                        <button class="col-4 color-button" data-color="yellow">Yellow</button>
+                        <button class="col-4 color-button">Blue</button>
                     </div>
                     <div id="secondary-face-colors" class="row secondary-colors">
-                        <button class="col-4">Orange</button>
-                        <button class="col-4">Purple</button>
-                        <button class="col-4">Green</button>
+                        <button class="col-4 color-button">Orange</button>
+                        <button class="col-4 color-button">Purple</button>
+                        <button class="col-4 color-button">Green</button>
                     </div>
                 </div>
             </div>
-            <div id="change-clock-hands" class="col-4">
-                <span>Change The Color of the Clock Hands</span>
-                <div id="primary-hands-colors" class="row primary-colors">
-                    <button class="col-4">Red</button>
-                    <button class="col-4">Yellow</button>
-                    <button class="col-4">Blue</button>
-                </div>
-                <div id="secondary-hands-colors" class="row secondary-colors">
-                    <button class="col-4">Orange</button>
-                    <button class="col-4">Purple</button>
-                    <button class="col-4">Green</button>
-                </div>
+            <div class="col-4 interface-subdiv">
+                <button id="change-clock-hands" class="show-button-toggle" data-panel="clock-hands">Change The Color of the Clock Hands</button>
+                <div id="hand-colors" class="hidden" data-panel="clock-hands">
+                    <div id="primary-hands-colors" class="row primary-colors">
+                        <button class="col-4 color-button">Red</button>
+                        <button class="col-4 color-button">Yellow</button>
+                        <button class="col-4 color-button">Blue</button>
+                    </div>
+                    <div id="secondary-hands-colors" class="row secondary-colors">
+                        <button class="col-4 color-button">Orange</button>
+                        <button class="col-4 color-button">Purple</button>
+                        <button class="col-4 color-button">Green</button>
+                    </div>
+                </div>    
             </div>
-            <div id="change-interface" class="col-4">
-                <span>Change The Color of this Interface</span>
-                <div id="primary-hands-colors" class="row primary-colors">
-                    <button class="col-4">Red</button>
-                    <button class="col-4">Yellow</button>
-                    <button class="col-4">Blue</button>
-                </div>
-                <div id="secondary-hands-colors" class="row secondary-colors">
-                    <button class="col-4">Orange</button>
-                    <button class="col-4">Purple</button>
-                    <button class="col-4">Green</button>
+            <div class="col-4 interface-subdiv">
+                <button id="change-interface" class="show-button-toggle" data-panel="interface">Change The Color of this Interface</button>
+                <div id="interface-colors" class="hidden" data-panel="interface">
+                    <div id="primary-interface-colors" class="row primary-colors">
+                        <button class="col-4 color-button">Red</button>
+                        <button class="col-4 color-button">Yellow</button>
+                        <button class="col-4 color-button">Blue</button>
+                    </div>
+                    <div id="secondary-interface-colors" class="row secondary-colors">
+                        <button class="col-4 color-button">Orange</button>
+                        <button class="col-4 color-button">Purple</button>
+                        <button class="col-4 color-button">Green</button>
+                    </div>
                 </div>
             </div>
         </div>

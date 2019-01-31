@@ -38,3 +38,19 @@ body{
     bottom: 0vh;
     padding-bottom: 50px;
 }
+
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: inline-block;
+}
+
+.show-button-toggle{
+    display: inline-block
+}
+.hide-button-toggle{
+    display: none;
+}
