@@ -4,6 +4,7 @@ window.onload = () => {
     const HOUR_HAND = document.querySelector("#hour-hand")
 
     function setTime(){
+        // console.log(CLOCK_HANDS)
         const TODAY = new Date()
         
         // Seconds Variables
@@ -15,8 +16,9 @@ window.onload = () => {
         var minutesDegrees = (( CURRENT_MINUTES / 60 ) * 360) + 90
 
         //Hours Variables
-        const CURRENT_HOURS = TODAY.getHours()
-        var hoursDegrees = (( CURRENT_HOURS / 12 ) * 360) + 90
+        var currentHours = TODAY.getHours()
+        currentHours>12 ? currentHours-=12 : currentHours //Converts the current hour from a 24 hour format to 12 hour format.  
+        var hoursDegrees = (( currentHours / 12 ) * 360) + 90
 
 
         SECOND_HAND.style.transform = `rotate(${secondsDegrees}deg)`
