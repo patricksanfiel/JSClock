@@ -26,7 +26,7 @@ window.onload = () => {
         HOUR_HAND.style.transform = `rotate(${hoursDegrees}deg)`
     }
 
-    const CHANGE_CLOCK_COLORS = document.getElementById("interface-subdiv-container");
+    const CHANGE_CLOCK_COLORS = document.getElementById("interface-subdiv-container");//Element which will hold an event listener, expanding each of the interface subdivs when the corresponding toggle button is clicked
     function toggleColorPanels(e) {
         if(e.target !== e.currentTarget && !e.target.classList.contains("color-button") && e.target.classList.contains("show-button-toggle")){ //We want to target the buttons inside the #interface-subdiv-container div and not the div itself. We also want to make sure we're not targeting any of the color change buttons, otherwise all the other panels would expand every time a user changed a color. Finally, we want to make sure that only visible buttons are clickable, which we do by ensuring that our clicked element has the show-button-toggle class. All of the interface panel toggle buttons start out with this class, and when one is clicked, it is removed from all of the others. When that same toggle button is clicked again to collapse its panel, the show-button-toggle class is reapplied to all of the toggle buttons once again.
             let toggleButton = e.target;
@@ -62,27 +62,20 @@ window.onload = () => {
                 var toggleButtons = document.querySelectorAll("button[data-panel]")//Buttons which, when click expand and collapse their respective color panels
                 if(document.getElementById(elementToChange)){
                     document.getElementById(elementToChange).style.backgroundColor = clickedColor;//Changes the color of the element that corresponds to the currently expanded panel based on the color button clicked by the user inside that panel.
-                } else {
+                } else {//Since there is more than one hand, getting them all using an ID would not be possible
                     const ALL_HANDS = document.getElementsByClassName(elementToChange)
                     Array.prototype.forEach.call(ALL_HANDS, hand => {
                             hand.style.backgroundColor = clickedColor;
                         }
                     )
                 }
-                if(elementToChange == "interface"){
+                if(elementToChange == "interface"){//When the user changes the interface color, the text for the color buttons and toggle buttons will be changed to that color as well
                     Array.prototype.forEach.call(toggleButtons, (button)=> button.style.color = clickedColor)
                     Array.prototype.forEach.call(COLOR_BUTTONS, button => button.style.color = clickedColor)
-                }
-                var interface = document.getElementById("interface");
-                var interfaceColor = interface.style.backgroundColor
-                // console.log(interface)
-                interface.style.backgroundColor = interfaceColor;
-                // Array.prototype.forEach.call(COLOR_BUTTONS, button => button.style.color = interfaceColor)    
+                } 
             });
         }
     )
-    // COLOR_BUTTONS.forEach(console.log(this))
     CHANGE_CLOCK_COLORS.addEventListener("click", toggleColorPanels)
     setInterval(setTime, 1000)
-    // Array.prototype.forEach.call(COLOR_BUTTONS, button => button.style.color = interfaceColor)
 }
