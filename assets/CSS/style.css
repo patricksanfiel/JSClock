@@ -86,6 +86,14 @@ button{
     animation: glow 7s ease-in-out infinite;
 }
 
+button:hover{
+    cursor: pointer;
+}
+button:focus, button:active{
+    outline: none !important;
+    box-shadow: 0px 3px 25px currentColor !important;
+}
+
 .primary-colors, .secondary-colors{
     margin: 0 auto;
 }
