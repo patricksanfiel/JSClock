@@ -59,6 +59,7 @@ window.onload = () => {
                 var clickedColor = clickedButton.getAttribute("data-color")
                 var clickedGrandparent = clickedButton.parentElement.parentElement
                 var elementToChange = clickedGrandparent.getAttribute("data-panel")
+                var toggleButtons = document.querySelectorAll("button[data-panel]")//Buttons which, when click expand and collapse their respective color panels
                 if(document.getElementById(elementToChange)){
                     document.getElementById(elementToChange).style.backgroundColor = clickedColor;//Changes the color of the element that corresponds to the currently expanded panel based on the color button clicked by the user inside that panel.
                 } else {
@@ -68,11 +69,20 @@ window.onload = () => {
                         }
                     )
                 }
-                
+                if(elementToChange == "interface"){
+                    Array.prototype.forEach.call(toggleButtons, (button)=> button.style.color = clickedColor)
+                    Array.prototype.forEach.call(COLOR_BUTTONS, button => button.style.color = clickedColor)
+                }
+                var interface = document.getElementById("interface");
+                var interfaceColor = interface.style.backgroundColor
+                // console.log(interface)
+                interface.style.backgroundColor = interfaceColor;
+                // Array.prototype.forEach.call(COLOR_BUTTONS, button => button.style.color = interfaceColor)    
             });
         }
     )
     // COLOR_BUTTONS.forEach(console.log(this))
     CHANGE_CLOCK_COLORS.addEventListener("click", toggleColorPanels)
     setInterval(setTime, 1000)
+    // Array.prototype.forEach.call(COLOR_BUTTONS, button => button.style.color = interfaceColor)
 }
