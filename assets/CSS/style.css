@@ -45,11 +45,24 @@ body{
 
 .visible{
     display: inline-block;
+    width: 100%;
 }
 
 .show-button-toggle{
-    display: inline-block
+    display: inline-block;
+    margin: 1em auto;
+    width: 100%;
+    background-color: black;
+    color: orange;
+}
+.color-button{
+    background-color: black;
+    color: orange;
 }
 .hide-button-toggle{
     display: none;
+}
+
+.primary-colors, .secondary-colors{
+    margin: 0 auto;
 }
